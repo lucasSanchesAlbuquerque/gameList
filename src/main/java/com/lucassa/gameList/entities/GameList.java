@@ -2,13 +2,16 @@ package com.lucassa.gameList.entities;
 
 import java.util.Objects;
 
+import org.hibernate.annotations.Table;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class GameList {
+@jakarta.persistence.Table(name = "tb_game_list")
+public class GameList{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
